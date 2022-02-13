@@ -29,3 +29,19 @@ document.getElementById("key-pad").addEventListener("click", function (event) {
     calcInput.value = newNumber;
   }
 });
+
+//  matcher combinations
+
+function verifyPin() {
+  const pin = document.getElementById("display-pin").value;
+  const typeNumbers = document.getElementById("typed-numbers").value;
+  const successMessage = document.getElementById("notify-success");
+  const failError = document.getElementById("notify-fail");
+  if (pin == typeNumbers) {
+    successMessage.style.display = "block";
+    failError.style.display = "none";
+  } else {
+    successMessage.style.display = "none";
+    failError.style.display = "block";
+  }
+}
